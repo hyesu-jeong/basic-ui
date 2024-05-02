@@ -1,18 +1,29 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 
+:root {
+  --container-size: 940px;
+}
+
 body {
   font-family: "Pretendard Variable", sans-serif;
+}
+
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+  width: var(--container-size, 940px);
+  margin: 0 auto;
 }
 
 /* 헤더 */
 .header {
   background-color: yellow;
-  width: 940px;
 }
 /* 비주얼 */
 .visual {
   background-color: pink;
-  inline-size: 940px;
 }
 /* 메인 콘텐츠 */
 .main {
