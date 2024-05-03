@@ -6,6 +6,11 @@
 
 body {
   font-family: "Pretendard Variable", sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header,
@@ -19,47 +24,106 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: yellow;
+  background-color: #ffffff;
   height: 10vh;
-  padding: 0 50px;
+  padding: 8px 28px 40px 28px;
+  border-radius: 0px 0px 15px 15px;
+  position: relative;
 }
+
+/* 로고 */
+.logo {
+}
+.logo img {
+  width: 165px;
+  height: 35px;
+}
+
+/* 내비게이션 메뉴 */
+
+.navigation {
+  clear: both;
+  height: 53px;
+  position: absolute;
+  top: 37px;
+}
+
+.nav {
+  position: absolute;
+}
+
+.menu {
+  height: inherit;
+  padding: 4px 24px;
+  margin-left: 2px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* 멤버 */
+
+.member {
+  background-color: #ffffff;
+  float: right;
+}
+
+.memberList-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+  gap: 8px;
+}
+
+.memberList {
+  color: #000;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 /* 비주얼 */
 .visual {
   background-color: pink;
   height: 10vh;
 }
 /* 메인 콘텐츠 */
+
 .main {
   background-color: skyblue;
-  height: 60vh;
+  /* height: 60vh; */
+  display: flow-root;
+  min-height: 450px;
   padding: 28px 16px 36px 16px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between; /* 메인 축 */
-  align-items: stretch; /* 교차 축 */
 }
 
 .group {
   border: 1px solid red;
+  float: left;
+}
+
+.group:nth-child(n + 2) {
+  margin-left: 44px;
 }
 
 .group1 {
   width: 250px;
-  order: 2;
 }
 .group2 {
   width: 380px;
-  order: 3;
 }
 .group3 {
   width: 190px;
-  order: 1;
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lime;
   height: 10vh;
+  clear: both;
 }
 /* 푸터 */
 .footer {
@@ -68,4 +132,16 @@ body {
 .footer-inner {
   background: yellow;
   height: 10vh;
+}
+
+/* --------------------------------------------------------- */
+/*          flex를 지원하는 웹브라우저를 위한 스타일         */
+/* --------------------------------------------------------- */
+
+@supports (display: flex) {
+  .main {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
 }
