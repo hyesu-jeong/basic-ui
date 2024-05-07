@@ -33,7 +33,12 @@ a {
 
 /* 로고 */
 .logo {
+  background-color: orange;
+  position: absolute;
+  top: 45px;
+  left: 60px;
 }
+
 .logo img {
   width: 165px;
   height: 35px;
