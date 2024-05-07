@@ -1,0 +1,49 @@
+/* 텍스트 링크 모음 */
+:root {
+  --base-font-family: "SUIT Variable", sans-serif;
+}
+
+.member-service {
+  --font-size: 0.875rem;
+
+  /* font-size:0; > display:inline-block; 여백 없애주기 위해서 입력한 값 */
+  font-family: var(--base-font-family);
+  font-size: 0;
+  list-style-type: none;
+  background-color: yellow;
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+  text-align: right;
+  line-height: 1;
+
+  li {
+    font-size: var(--font-size);
+    background-color: orange;
+    display: inline-block;
+
+    a {
+      display: inherit;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: inherit;
+      padding: 8px 8px 8px 4px;
+    }
+
+    /* 상태별 스타일 지정 */
+
+    /* a:link {
+      color: green;
+    }
+    a:visited {
+      color: silver;
+    }
+    a:active {
+      color: red;
+    }
+    a:hover,
+    a:focus {
+      color: blueviolet;
+    } */
+  }
+}
