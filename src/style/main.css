@@ -1,5 +1,9 @@
+@import url(./theme.css);
+
 :root {
   --container-size: 940px;
+  --primary: var(--orange-200);
+  --secondary: var(--orange-100);
 }
 
 /* 전체 기본 박스 사이징 설정 */
@@ -36,7 +40,7 @@ a {
 
 /* 헤더 */
 .header {
-  background-color: #ffffff;
+  background-color: var(--primary);
   height: 10vh;
   padding: 8px 28px 40px 28px;
   border-radius: 0px 0px 15px 15px;
