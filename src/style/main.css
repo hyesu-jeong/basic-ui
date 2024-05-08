@@ -103,7 +103,15 @@ a {
 @keyframes moveEffect {
   0% {
     font-size: 12px;
-    margin: 0;
+
+    /* translate를 활용한 애니메이션 */
+    transform: translate(0, 0) scale(1);
+    /* translate: 0 0;
+    rotate: 0deg; */
+
+    /* margin을 활용한 애니메이션 */
+    /* margin: 0; */
+
     /* position을 활용한 애니메이션 */
     /* top: 0; */
     /* top 논리 속성 */
@@ -114,7 +122,15 @@ a {
   }
   100% {
     font-size: 24px;
-    margin: 75px 0 0 400px;
+
+    /* translate를 활용한 애니메이션 */
+    transform: translate(400px, 75px) scale(1.5);
+    /* translate: 400px 75px;
+    rotate: 45deg; */
+
+    /* margin을 활용한 애니메이션 */
+    /* margin: 75px 0 0 400px; */
+
     /* position을 활용한 애니메이션 */
     /* top: 75px;
     inset-block-start: 75px;
@@ -123,18 +139,18 @@ a {
   }
 }
 
-.visual-text {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  animation-name: moveEffect;
-  animation-duration: 5000ms;
-  animation-fill-mode: forwards;
-  /* position을 활용한 애니메이션 */
-  /* position: absolute;
-  z-index: 1; */
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .visual {
-  border: 1px solid transparent;
+  /* margin을 활용해서 위치를 바꿀 때 border 속성으로 영역을 맞아주지 않으면 영역이 늘어나게 된다. */
+  /* border: 1px solid transparent; */
   height: 120px;
   block-size: 120px;
   position: relative;
@@ -151,6 +167,13 @@ a {
     top: 0;
     left: 0;
     background-repeat: no-repeat;
+    animation-name: fadeEffect;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    /* direction: 방향을 순방향을 진행 후 역방향으로 설정 */
+    animation-direction: alternate;
+    /* 위에 있는 애니메이션 속성을 한줄로 아래와 같이 입력할 수도 있음 */
+    /* animation: fadeEffect 4s infinite; */
   }
 }
 
@@ -165,6 +188,20 @@ a {
   background-image: url(./../images/ani_flower_03.png),
     url(./../images/ani_flower_04.png);
   background-position: 300px 0, 800px 30px;
+  animation-delay: 2000ms;
+}
+
+.visual-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  animation-name: moveEffect;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  /* position을 활용한 애니메이션 */
+  /* position: absolute;
+  z-index: 1; */
 }
 
 /* 메인 콘텐츠 */
