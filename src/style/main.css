@@ -7,10 +7,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
 }
 
 /* 그라디언트 배경, 배경 이미지 적용 */
 body {
+  line-height: 1.15;
   font-family: "SUIT Variable", sans-serif;
   background: #fff;
   background-image: url(./../images/bg_flower.png),
@@ -46,8 +48,17 @@ a {
   position: absolute;
   top: 45px;
   left: 60px;
+  font-size: 1em;
+
+  a,
+  img {
+    display: block;
+    /* 인라인 상자 정렬 */
+    /* vertical-align: top; */
+  }
 }
 
+/* 텍스트 링크 모음 */
 .member-service {
   --spacing: 8px;
 
