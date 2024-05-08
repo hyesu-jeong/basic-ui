@@ -1,0 +1,37 @@
+.box {
+  width: 500px;
+  height: 100px;
+  border: 20px dashed blue;
+  padding: 20px;
+  margin: 50px;
+  overflow: auto;
+  background: pink;
+  /* 이미지 파일 상대 경로 */
+  background-image: url(./../../../images/coffee.png);
+  /* 이미지 파일 절대 경로
+  절대 경로는 라이브 서버나 배포 시 보이지 않게 된다. */
+  /* background-image: url(/images/coffee.png); */
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-attachment: scroll;
+  /* 위에 있는 값을 아래와 같이 한번에 입력할 수 있음 */
+  /* background: pink url(./../../../images/coffee.png) no-repeat 50% 50% contain
+    scroll; */
+}
+
+.container {
+  width: 600px;
+  height: 300px;
+  inline-size: 600px;
+  block-size: 300px;
+  border: 1px solid red;
+  background-color: yellow;
+  /* 백그라운드 이미지를 두개 적용할 경우 겹쳐지는데 먼저 적용한 이미지가 위에 올라온다. */
+  background-image: url(./../../../images/ani_flower_01.png),
+    url(./../../../images/ani_flower_02.png);
+  background-repeat: no-repeat;
+  /* 아래와 같이 두 이미지 각각 위치 지정 가능함 */
+  background-position: 0 0, 200px 100px;
+  background: yellow url(./../../../images/ani_flower_01.png) no-repeat 0 0;
+}

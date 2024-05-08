@@ -1,12 +1,22 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
-
 :root {
   --container-size: 940px;
 }
 
+/* 전체 기본 박스 사이징 설정 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 그라디언트 배경, 배경 이미지 적용 */
 body {
-  font-family: "Pretendard Variable", sans-serif;
-  background-color: #f4f4f4;
+  font-family: "SUIT Variable", sans-serif;
+  background: #fff;
+  background-image: url(./../images/bg_flower.png),
+    linear-gradient(180deg, #e0e0e0 0%, #fff 100%);
+  background-repeat: no-repeat;
+  background-position: 50% 0, 0 0;
 }
 
 a {
@@ -33,7 +43,6 @@ a {
 
 /* 로고 */
 .logo {
-  background-color: orange;
   position: absolute;
   top: 45px;
   left: 60px;
@@ -92,17 +101,47 @@ a {
 
 /* 비주얼 */
 .visual {
-  background-color: pink;
-  height: 10vh;
+  height: 120px;
+  block-size: 120px;
+  position: relative;
+
+  /* before, after 공통적용 */
+  &::before,
+  &::after {
+    content: "";
+    width: inherit;
+    inline-size: inherit;
+    height: inherit;
+    block-size: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+  }
 }
+
+/* before, after 따로 적용 */
+.visual::before {
+  /* z-index: 1; */
+  background-image: url(./../images/ani_flower_01.png),
+    url(./../images/ani_flower_02.png);
+  background-position: 0 -10px, 600px 10px;
+}
+.visual::after {
+  background-image: url(./../images/ani_flower_03.png),
+    url(./../images/ani_flower_04.png);
+  background-position: 300px 0, 800px 30px;
+}
+
 /* 메인 콘텐츠 */
 
 .main {
-  background-color: skyblue;
   /* height: 60vh; */
+  background: #fff;
   display: flow-root;
   min-height: 450px;
   padding: 28px 16px 36px 16px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .group {
@@ -126,7 +165,6 @@ a {
 
 /* 슬로건 */
 .slogan {
-  background-color: lime;
   height: 10vh;
   clear: both;
 }
@@ -135,7 +173,6 @@ a {
   background-color: orange;
 }
 .footer-inner {
-  background: yellow;
   height: 10vh;
 }
 

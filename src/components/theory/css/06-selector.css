@@ -1,0 +1,14 @@
+/*  */
+
+/* class 선택자 */
+.box {
+  border: 1px solid red;
+}
+
+/* 가상 요소 선택자*/
+.box::before {
+  content: "첫 번째 자식요소";
+}
+.box::after {
+  content: "마지막 자식요소";
+}
