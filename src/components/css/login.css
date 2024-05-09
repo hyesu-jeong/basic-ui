@@ -74,7 +74,7 @@
     var(--end-color)
   );
   border-radius: var(--radius);
-  padding: var(--spacing);
+  padding: 12px;
   box-shadow: var(--shadow-depth) var(--shadow-depth) 0 0 var(--shadow-color);
 
   /* 로그인 제목 */
@@ -109,7 +109,7 @@
       flex-grow: 1;
       display: flex;
       flex-flow: column nowrap;
-      gap: var(--spacing);
+      gap: 4px;
 
       label {
         min-width: 3.5em;
