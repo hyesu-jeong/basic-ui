@@ -4,9 +4,9 @@
 
 /* input 컴포넌트 */
 .form-input {
-  --spacing: 10px;
+  --spacing: 8px;
   --border-color: var(--gray-500);
-  --radius: 3px;
+  --radius: 5px;
 
   display: flex;
   flex-flow: row nowrap;

@@ -1,0 +1,97 @@
+@import url(/style/theme.css);
+@import url(/style/reset.css);
+@import url(/style/base.css);
+
+:root {
+  --spacing: 8px;
+}
+
+/* input 컴포넌트 */
+.form-input {
+  --border-color: var(--gray-500);
+  --radius: 5px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: var(--spacing);
+  align-items: center;
+
+  /* 텍스트 줄바꿈 안되게 할 때 적용 */
+  label {
+    white-space: nowrap;
+  }
+
+  input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1px 1px 1px 8px;
+    height: 24px;
+    block-size: 24px;
+    width: 100%;
+  }
+}
+
+/* button 컴포넌트 */
+.button {
+  --bg-color: var(--orange-200);
+  --color: var(--white);
+  --radius: 3px;
+
+  border: 0;
+  padding: 16px 10px;
+  background-color: var(--bg-color);
+  color: var(--color);
+  border-radius: var(--radius);
+  white-space: nowrap;
+
+  &.search-button {
+    background-color: var(--black);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    margin-left: var(--spacing);
+  }
+}
+
+/* 검색 폼 레이아웃 스타일링 */
+.search {
+  background-image: linear-gradient(180deg, #ccc 0%, #eee 100%);
+  border: 1px solid var(--gray-600);
+  border-bottom-color: #fff;
+  padding: 12px 24px 8px 24px;
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  .search-group {
+    display: flex;
+    flex-flow: row nowrap;
+
+    .form-input {
+      flex-grow: 1;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1;
+
+      label {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  [class*="fab"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0.3077em;
+    width: 20px;
+    height: 20px;
+  }
+
+  input,
+  button {
+    height: 24px;
+  }
+}
