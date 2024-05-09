@@ -1,10 +1,124 @@
 @import url(/style/theme.css);
+@import url(/style/reset.css);
+@import url(/style/base.css);
 
-/* 기본 글꼴 */
-:root {
-  --base-font-family: "SUIT Variable", sans-serif;
+/* 로그인 */
+.login {
+  width: 244px;
+
+  --box-start-color: var(--orange-200);
+  --box-end-color: var(--orange-100);
+  --box-shadow-color: var(--gray-500);
+
+  background-image: linear-gradient(
+    90deg,
+    var(--box-start-color) 0%,
+    var(--box-end-color) 100%
+  );
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 5px 5px 0px 0px var(--box-shadow-color);
 }
 
-body {
-  font-family: var(--base-font-family);
+.login-title {
+  --color: var(--yellow);
+  color: var(--color);
+  margin: 0;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* input 컴포넌트 */
+
+/* 텍스트 줄바꿈 안되게 할 때 적용 */
+label {
+  white-space: nowrap;
+}
+
+.login-form {
+  margin-top: 8px;
+  margin-block-start: 8px;
+  background-color: var(--white);
+  border-radius: 5px 5px 0px 0px;
+  padding: 8px;
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0;
+    position: relative;
+    border-bottom: 1px solid var(--gray-500);
+  }
+
+  div {
+    display: flow-root;
+    margin-bottom: 4px;
+  }
+
+  label {
+    display: inline-block;
+    width: 56px;
+    height: 24px;
+    float: left;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  input {
+    float: left;
+    width: calc(100% - 131px);
+    height: 20px;
+    padding-left: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--gray-500, #ccc);
+  }
+  .user-pwd {
+    margin-bottom: 8px;
+  }
+}
+
+/* button 컴포넌트 */
+
+/* 링크 텍스트 컴포넌트 (아이콘 유형) */
+.icon-link {
+  --color: var(--orange-200);
+
+  [class*="fas"] {
+    color: var(--color);
+    padding-right: 0.25em;
+    padding-inline-end: 0.25em;
+  }
+}
+
+.login-button {
+  width: 50;
+  height: 52px;
+  border: 0;
+  padding: 16px 10px;
+  background-color: var(--orange-200);
+  color: var(--white);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  /* top 논리 속성 */
+  inset-block-start: 0;
+  right: 0;
+  /* right 논리 속성 */
+  inset-inline-end: 0;
+}
+
+.member-sign {
+  background-color: var(--white);
+  list-style: none;
+  border-radius: 0px 0px 5px 5px;
+  margin: 0;
+  padding: 4px 8px;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
