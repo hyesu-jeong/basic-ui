@@ -1,0 +1,25 @@
+@import url(/style/theme.css);
+@import url(/style/reset.css);
+
+/* 기본 글꼴 */
+:root {
+  --base-font-family: "SUIT Variable", sans-serif;
+}
+
+/* body에 속해있는 거만 적용 */
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+}
+
+/* class 를 줬을 때만 적용 */
+/* class를 적용했는지 확인하기 유용 */
+/* [class] {
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: var(--base-font-family);
+  line-height: 1.15;
+}
