@@ -10,7 +10,11 @@
 
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   gap: var(--spacing);
+
+  font-size: 0.875em;
+  font-weight: 400;
 
   /* 텍스트 줄바꿈 안되게 할 때 적용 */
   label {
@@ -32,14 +36,16 @@
 .button {
   --bg-color: var(--orange-200);
   --color: var(--white);
-  --radius: 3px;
+  --radius: 5px;
 
   border: 0;
-  padding: 16px 10px;
+  padding: 1em;
   background-color: var(--bg-color);
   color: var(--color);
   border-radius: var(--radius);
   white-space: nowrap;
+  font-size: 0.8125em;
+  font-weight: 400;
 
   &:focus {
     outline: 0;
@@ -50,24 +56,13 @@
   }
 }
 
-/* 링크 텍스트 컴포넌트 (아이콘 유형) */
-.icon-link {
-  --color: var(--orange-200);
-
-  [class*="fas"] {
-    color: var(--color);
-    padding-right: 0.25em;
-    padding-inline-end: 0.25em;
-  }
-}
-
 /* 로그인 */
 .login {
   /* 로그인 변수 */
   --start-color: var(--orange-100);
   --end-color: var(--orange-200);
-  --shadow-color: var(--gray-700);
-  --spacing: 10px;
+  --shadow-color: var(--gray-500);
+  --spacing: 8px;
   --radius: 5px;
   --shadow-depth: 5px;
   --bg-color: var(--white);
@@ -88,7 +83,9 @@
 
     color: var(--color);
     margin: 0;
-    font-size: 0.9375rem;
+    font-size: 0.9375em;
+    font-weight: 700;
+    line-height: 1.5;
   }
 
   /* 로그인 폼 */
@@ -115,19 +112,39 @@
       gap: var(--spacing);
 
       label {
-        min-width: 4em;
-        min-inline-size: 4em;
+        min-width: 3.5em;
+        min-inline-size: 3.5em;
       }
     }
   }
+}
 
-  /* 멤버 서비스 관련 링크 */
-  .member-sign {
-    background-color: var(--bg-color);
-    border-radius: 0 0 var(--radius) var(--radius);
-    padding: 0 var(--spacing) var(--spacing) var(--spacing);
+/* 멤버 서비스 관련 링크 */
+.member-sign {
+  background-color: var(--bg-color);
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 0 var(--spacing) var(--spacing) var(--spacing);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  gap: 0.5em;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* 링크 텍스트 컴포넌트 (아이콘 유형) */
+.icon-link {
+  --color: var(--orange-200);
+  display: flex;
+  gap: 0.15em;
+
+  [class*="fas"] {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    color: var(--color);
+    width: 1em;
+    height: 1em;
   }
 }
