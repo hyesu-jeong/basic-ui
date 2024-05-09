@@ -1,0 +1,23 @@
+@import url(/style/theme.css);
+@import url(/style/reset.css);
+@import url(/style/base.css);
+
+/* 모든 디바이스 */
+/* 모바일 디바이스 or 모바일 퍼스트 */
+body {
+  background: yellow;
+}
+
+/* 320px 이상 640px 이하 */
+@media (min-width: 320px) and (max-width: 640px) {
+  body {
+    background: green;
+  }
+}
+
+/* 640px ~ 800px 디바이스 */
+@media (min-width: 640px) and (max-width: 800px) {
+  body {
+    background: pink;
+  }
+}
