@@ -12,3 +12,8 @@
 .box::after {
   content: "마지막 자식요소";
 }
+
+/* 인접형제 선택자 */
+h1 + div {
+  background: yellow;
+}
