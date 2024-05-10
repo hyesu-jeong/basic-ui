@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>체크박스/라디오 버튼 컴포넌트</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/components/css/checkbox.css" />
+  </head>
+  <body>
+    <h1>체크박스/라디오 버튼 컴포넌트</h1>
+    <!-- 체크박스 컴포넌트 -->
+    <div class="form-checkbox">
+      <input
+        type="checkbox"
+        id="saveLoginInformation"
+        name="saveLoginInformation"
+      />
+      <label for="saveLoginInformation">간편로그인 정보 저장</label>
+    </div>
+    <!-- 라디오 버튼 컴포넌트 -->
+    <div role="group" aria-labelledby="gender">
+      <strong id="gender">성별</strong>
+      <div class="form-radio">
+        <input type="radio" id="male" name="gender" />
+        <label for="male">남자</label>
+      </div>
+      <div class="form-radio">
+        <input type="radio" id="female" name="gender" />
+        <label for="female">여자</label>
+      </div>
+    </div>
+  </body>
+</html>
