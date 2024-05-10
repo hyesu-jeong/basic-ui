@@ -1,7 +1,27 @@
 .box {
   background: yellow;
+  /* display: inline-block; */
+  overflow: hidden;
+}
+
+.box1 {
+  border: 1px solid blue;
+  float: left;
 }
 
 .box2 {
+  border: 1px solid orange;
+  padding: 5px;
+  float: left;
+}
+
+.box3 {
+  border: 1px solid green;
+  background-color: lime;
+  float: left;
+}
+
+.box4 {
+  border: 1px solid purple;
   float: left;
 }
