@@ -1,0 +1,107 @@
+@import url(/style/theme.css);
+@import url(/style/reset.css);
+@import url(/style/base.css);
+
+body,
+h1 {
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+.tabs {
+  width: 50%;
+  position: relative;
+
+  /* has 선택자 */
+  &:has(.is-selected) {
+    .tab-panel {
+    }
+  }
+}
+
+/* 탭 컴포넌트 */
+
+.tab-list {
+  height: 37px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  font-size: 14px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 5px 5px 0px 0px;
+  border: 1px solid #a3a3a3;
+  background: #ccc;
+  color: #525252;
+}
+
+.is-selected {
+  border-color: var(--orange-200) var(--orange-200) #fff var(--orange-200);
+  background-color: #fff;
+  color: var(--orange-200);
+}
+
+/* 탭 패널, 탭 패널 아이템 */
+
+.tab-panel {
+  /* display: flex; */
+  display: none;
+  flex-flow: column nowrap;
+  gap: 8px;
+  margin: 8px 0;
+
+  &.is-selected {
+    display: flex;
+  }
+}
+
+.tab-panel-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+  a {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--content);
+
+    [class*="fas"] {
+      font-size: 14px;
+      font-weight: 200;
+      margin-right: 4px;
+      color: currentColor;
+    }
+  }
+  span {
+    flex: 0 0 auto;
+    flex-basis: 80px;
+    /* flex-shrink: 0; */
+    text-align: right;
+    color: var(--gray-800);
+    font-size: 13px;
+  }
+}
+
+.tab-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--content);
+
+  [class*="fas"] {
+    font-size: 14px;
+    font-weight: 200;
+    margin-right: 4px;
+    color: currentColor;
+  }
+}
