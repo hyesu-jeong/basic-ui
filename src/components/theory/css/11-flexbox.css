@@ -9,7 +9,6 @@ body {
 } */
 
 .container {
-  margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
   height: 100vh;
@@ -20,11 +19,9 @@ body {
   } */
 }
 
-.container-flude {
+.container-fluid {
   margin: 0 auto;
-  /* width: 80%;
-  min-width: 500px;
-  max-width: 1200px; */
+  width: 80%;
   /* width: clamp(500px, 80%, 1200px); */
 }
 
@@ -70,19 +67,30 @@ body {
   flex-flow: row nowrap;
   column-gap: 50px;
   flex: 1 0 0;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
+/* .main과 .sidebar를 Grouping */
 .main {
-  flex-basis: 200px;
-  flex-grow: 6;
+  /* flex-grow: 1;
   flex-shrink: 0;
+  flex-basis: 0; */
+  flex: 1 0 0;
+  box-shadow: 0 0 0 1px #000;
+  min-width: 300px;
+
+  .pagination {
+    width: 80%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 }
 
 .sidebar {
-  flex-basis: 200px;
-  flex-grow: 1;
+  /* flex-grow: 0;
   flex-shrink: 0;
+  flex-basis: 200px; */
+  flex: 0 0 150px;
 }
 
 .footer {
