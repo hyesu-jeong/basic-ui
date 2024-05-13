@@ -13,10 +13,10 @@ h1 {
   position: relative;
 
   /* has 선택자 */
-  &:has(.is-selected) {
+  /* &:has(.is-selected) {
     .tab-panel {
     }
-  }
+  } */
 }
 
 /* 탭 컴포넌트 */
