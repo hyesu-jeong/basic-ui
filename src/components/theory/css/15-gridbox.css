@@ -7,34 +7,54 @@ body {
 .container {
   border: 10px solid #000;
   display: grid;
-  grid-template-columns: repeat(5, 20%);
-  grid-template-rows: repeat(10, 50px);
-  /* grid-auto-rows: 50px; */
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-auto-rows 컨텐츠 배치에 따라서 행이 자동으로 증가하는 속성 */
+  /* grid-auto-columns: minmax(20%, 1fr); */
+  grid-auto-rows: minmax(50px, auto);
+  /* grid-template-rows: repeat(10, 50px); */
+  gap: 20px;
+  /* 이름으로 배치하는 방법 */
+  grid-template-areas: "cell-1 cell-1 cell-2 cell-3" "cell-1 cell-1 cell-2 cell-3" "cell-1 cell-1 cell-4 cell-4" ". . cell-4 cell-4";
+
   /* dense: 비어있는 공간을 채워 밀집해서 보여주는 속성 */
   grid-auto-flow: dense;
 
-  /* 홀수 번째 */
-  div:nth-child(odd) {
+  /* odd: 홀수 번째 */
+  /* div:nth-child(odd) {
     grid-column: span 2;
-  }
+  } */
 
-  /* 짝수 번째 */
-  div:nth-child(even) {
+  /* even: 짝수 번째 */
+  /* div:nth-child(even) {
     grid-row: span 2;
-  }
+  } */
 }
 
+/* 이름으로 배치하는 방법 네이밍 */
 .grid-cell1 {
+  grid-area: cell-1;
+}
+.grid-cell2 {
+  grid-area: cell-2;
+}
+.grid-cell3 {
+  grid-area: cell-3;
+}
+.grid-cell4 {
+  grid-area: cell-4;
+}
+
+/* .grid-cell1 {
   grid-row-start: 3;
   grid-column-start: 2;
   grid-row-end: 5;
   grid-column-end: 4;
-}
+} */
 
 .grid-cell2 {
   /* 아래 4가지 스타일을 단축 표기한 것 */
-  grid-row: 8/11;
-  grid-column: 5/6;
+  /* grid-row: 8/11;
+  grid-column: 5/6; */
 
   /* grid-row-start: 8;
   grid-column-start: 5;
@@ -44,18 +64,18 @@ body {
 
 .grid-cell3 {
   /* 아래 2가지 스타일을 단축 표기한 것 */
-  grid-area: 7/2/9/4;
+  /* grid-area: 7/2/9/4; */
 
   /* grid-row: 7/9;
   grid-column: 2/4; */
 }
 
-.grid-cell4 {
+/* .grid-cell4 {
   grid-column: span 2;
   grid-row: span 2;
-}
+} */
 
-.grid-cell5 {
+/* .grid-cell5 {
   grid-row: 6/-1;
   grid-column: 1/-1;
-}
+} */
