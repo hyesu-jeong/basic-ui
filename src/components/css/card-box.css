@@ -33,9 +33,9 @@ h1 {
 /* width 1025px 이상 */
 @media (min-width: 1025px) {
   .container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 1440px;
     margin: 0 auto;
     padding: 80px;
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
