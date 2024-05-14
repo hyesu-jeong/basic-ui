@@ -1,0 +1,57 @@
+@import url(/style/theme.css);
+@import url(/style/reset.css);
+@import url(/style/base.css);
+
+.card {
+  /* width: 300px; */
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 0.5rem;
+  box-shadow: 0 0.1rem 0.25rem 2px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  h2,
+  p,
+  ul {
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  figure {
+    order: -1;
+    margin: 0;
+
+    img {
+      max-width: 100%;
+      vertical-align: top;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    margin: 0.5rem 0 1.5rem;
+
+    li {
+      display: inline-block;
+      padding: 0.25rem 0.625rem;
+      background-color: rgba(237, 242, 247);
+      color: rgba(74, 85, 104);
+      border-radius: 2rem;
+      flex: 0 0 auto;
+    }
+  }
+}

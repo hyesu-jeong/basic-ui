@@ -1,0 +1,41 @@
+@import url(/style/theme.css);
+@import url(/style/reset.css);
+@import url(/style/base.css);
+@import url(card.css);
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: grid;
+  padding: 20px;
+  gap: 1.25rem;
+}
+
+/* width 640px 까지 */
+@media (max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* width 640px 이상 */
+@media (min-width: 640px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+  }
+}
+
+/* width 1025px 이상 */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
