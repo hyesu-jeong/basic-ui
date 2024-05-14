@@ -1,0 +1,61 @@
+@import url(./default.css);
+
+body {
+  margin: 50px;
+}
+
+.container {
+  border: 10px solid #000;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(10, 50px);
+  /* grid-auto-rows: 50px; */
+  /* dense: 비어있는 공간을 채워 밀집해서 보여주는 속성 */
+  grid-auto-flow: dense;
+
+  /* 홀수 번째 */
+  div:nth-child(odd) {
+    grid-column: span 2;
+  }
+
+  /* 짝수 번째 */
+  div:nth-child(even) {
+    grid-row: span 2;
+  }
+}
+
+.grid-cell1 {
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-row-end: 5;
+  grid-column-end: 4;
+}
+
+.grid-cell2 {
+  /* 아래 4가지 스타일을 단축 표기한 것 */
+  grid-row: 8/11;
+  grid-column: 5/6;
+
+  /* grid-row-start: 8;
+  grid-column-start: 5;
+  grid-row-end: 11;
+  grid-column-end: 6; */
+}
+
+.grid-cell3 {
+  /* 아래 2가지 스타일을 단축 표기한 것 */
+  grid-area: 7/2/9/4;
+
+  /* grid-row: 7/9;
+  grid-column: 2/4; */
+}
+
+.grid-cell4 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid-cell5 {
+  grid-row: 6/-1;
+  grid-column: 1/-1;
+}
