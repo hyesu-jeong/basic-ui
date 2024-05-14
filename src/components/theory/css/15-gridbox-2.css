@@ -1,0 +1,36 @@
+@import url(./default.css);
+
+body {
+  margin: 50px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  gap: 10px;
+
+  div:nth-child(odd) {
+    grid-column: span 2;
+  }
+  div:nth-child(even) {
+    grid-row: span 2;
+  }
+
+  img {
+    max-width: 100%;
+    height: 100%;
+    /* object-fit(이미지 비율 유지하고 영역 꽉차게 하는 속성: cover(가로로 꽉 차게), contaion(세로로 꽉 차게) */
+    object-fit: cover;
+    /* object-position(보여지는 영역의 기준: x축 y축 */
+    object-position: 50% 50%;
+    transition: all 400ms;
+
+    &:hover {
+      scale: 1.1;
+    }
+  }
+}
